@@ -9,16 +9,18 @@ Make one folder per collection inside `public/work/`. The folder name is the col
 
     public/work/
       Lakkatora Travel/
-        photography          <- extensionless file: its NAME is the category
+        photography.txt      <- NAME = category, CONTENTS = collection description
         01.jpg  02.jpg  clip.mp4 ...
         cover.jpg            (optional) card cover, not repeated inside the collection
-        about.txt            (optional) description shown on the collection page
         youtube.txt          (optional) one YouTube link or ID per line
       Event Name/
-        videography
+        videography.txt
         reel.mp4
 
-- The category file can be named like the category slug or title, any case: `photography`, `Photography`, `davinci-resolve`, `DaVinci Resolve`.
+- The `.txt` file name is the category, and the text inside it is shown as the description on the collection page. It can be empty.
+- The category name can match the slug or title, any case: `photography.txt`, `Photography.txt`, `davinci-resolve.txt`, `DaVinci Resolve.txt`.
+- `youtube.txt` is special: it lists videos and is not treated as a category.
+- A file with no extension (e.g. `photography`) still works as the category, without a description.
 - A category name not listed in `data/work.js` is created automatically (grey colour).
 - A folder with no category file goes under "Other" (a warning is printed in the build log).
 - Folders with no images or videos are skipped.

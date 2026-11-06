@@ -1,13 +1,13 @@
 // SITE SETTINGS. Your work itself is NOT listed here: it is read automatically from /public/work.
 //
 // public/work/<Collection Name>/   one folder per collection
-//     photography                  extensionless file named after the category
+//     photography.txt              named after the category; its text is the collection description
 //     01.jpg, clip.mp4, ...        the media
 //
 // The `categories` below only style the tabs (colour, short text, order).
 // A category name that is not listed here is created automatically.
-// The extensionless file name can be the slug or the title (case and spaces ignored):
-// "photography", "Photography", "davinci-resolve", "DaVinci Resolve" all work.
+// The file name can be the slug or the title (case and spaces ignored):
+// "photography.txt", "Photography.txt", "davinci-resolve.txt", "DaVinci Resolve.txt" all work.
 
 export const profile = {
   name: 'Bristy',
