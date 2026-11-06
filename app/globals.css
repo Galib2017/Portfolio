@@ -83,3 +83,13 @@ figcaption p{grid-column:1/-1;color:var(--mute);font-size:.95rem}
 .lb-next{right:1rem;top:50%;transform:translateY(-50%)}
 @media(max-width:760px){.lb{padding:4rem .5rem 1rem}.lb-frame{width:100vw}.lb-prev{left:.4rem}.lb-next{right:.4rem}}
 @media(prefers-reduced-motion:reduce){.lb{animation:none}}
+
+/* carousel */
+.carousel{position:relative}
+.car-track{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:0;padding-bottom:.75rem;scrollbar-width:thin;scrollbar-color:var(--accent) var(--line)}
+.car-track>.card{flex:0 0 clamp(240px,28vw,340px);scroll-snap-align:start}
+.car-btn{position:absolute;top:calc(50% - 1.5rem);z-index:2;width:2.8rem;height:2.8rem;border:0;border-radius:50%;background:var(--ink);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:background .15s}
+.car-btn:hover{background:var(--accent)}
+.car-prev{left:-1rem}
+.car-next{right:-1rem}
+@media(max-width:760px){.car-btn{display:none}.car-track>.card{flex-basis:72vw}}

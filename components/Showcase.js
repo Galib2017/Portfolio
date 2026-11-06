@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import CollectionCard from './CollectionCard';
+import Carousel from './Carousel';
 
 export default function Showcase({ categories }) {
   const [active, setActive] = useState(categories[0]?.slug);
@@ -33,11 +34,11 @@ export default function Showcase({ categories }) {
           </div>
           <Link className="open" href={`/work/${cat.slug}/`}>Open the {cat.title} page</Link>
         </div>
-        <div className="grid">
-          {cat.collections.slice(0, 3).map((col) => (
+        <Carousel label={`${cat.title} collections`}>
+          {cat.collections.map((col) => (
             <CollectionCard key={col.slug} cat={cat} col={col} />
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );
