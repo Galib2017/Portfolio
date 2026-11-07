@@ -11,6 +11,9 @@
 
 export const profile = {
   name: 'Bristy',
+  // Hero background: put your image in /public (e.g. public/hero.jpg) and set the path here.
+  heroImage: '/hero.jpg',
+  heroOverlay: 0.45, // 0 = no darkening, 1 = black. Raise it if the text is hard to read.
   tagline: 'Photographer, filmmaker and designer.',
   about:
     'I make pictures, films, posters and 3D worlds. Pick a tab to see the collections, or open a page for the full set.',

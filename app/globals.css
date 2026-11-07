@@ -5,10 +5,6 @@ h1,h2{font-family:var(--display),system-ui,sans-serif;line-height:1.02;letter-sp
 a{color:inherit}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
 
-.hero{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;min-height:86vh;padding:0 clamp(20px,6vw,80px);gap:2rem}
-.hero h1{font-size:clamp(4.5rem,15vw,11rem);font-weight:800}
-.hero p{font-size:1.25rem;color:var(--mute);margin:1rem 0 2rem;max-width:30ch}
-.hero-3d{order:2;height:min(70vh,560px)}
 .open{display:inline-block;background:var(--ink);color:#fff;padding:.8rem 1.3rem;border-radius:999px;text-decoration:none;font-weight:600;transition:background .2s}
 .open:hover{background:var(--accent,var(--blue))}
 
@@ -37,7 +33,6 @@ figcaption p{grid-column:1/-1;color:var(--mute);font-size:.95rem}
 .foot{padding:3rem clamp(20px,6vw,80px);border-top:1px solid var(--line);display:grid;gap:1rem;color:var(--mute)}
 .foot p:last-child{display:flex;gap:1.5rem;flex-wrap:wrap}
 
-@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:2rem}.hero-3d{order:0;height:300px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
 .gallery{padding:3rem clamp(20px,6vw,80px) 5rem;border-top:1px solid var(--line)}
@@ -93,3 +88,14 @@ figcaption p{grid-column:1/-1;color:var(--mute);font-size:.95rem}
 .car-prev{left:-1rem}
 .car-next{right:-1rem}
 @media(max-width:760px){.car-btn{display:none}.car-track>.card{flex-basis:72vw}}
+
+
+/* hero: full-screen background image, text centred */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;padding:2rem clamp(20px,6vw,80px);color:#fff;
+  background-color:#1b2540;
+  background-image:linear-gradient(rgba(10,12,18,var(--overlay)),rgba(10,12,18,var(--overlay))),var(--hero-img),linear-gradient(135deg,#2B4BFF,#13151A);
+  background-size:cover;background-position:center}
+.hero h1{font-size:clamp(4rem,14vw,10rem);font-weight:800;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero p{font-size:clamp(1.05rem,2.2vw,1.5rem);margin:1rem auto 2rem;max-width:34ch;opacity:.92}
+.hero .open{background:#fff;color:var(--ink)}
+.hero .open:hover{background:var(--blue);color:#fff}
