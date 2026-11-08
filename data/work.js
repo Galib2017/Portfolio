@@ -10,18 +10,18 @@
 // "photography.txt", "Photography.txt", "davinci-resolve.txt", "DaVinci Resolve.txt" all work.
 
 export const profile = {
-  name: 'Bristy',
+  name: 'Galib',
   // Hero background: put your image in /public (e.g. public/hero.jpg) and set the path here.
   heroImage: '/hero.jpg',
   heroOverlay: 0.45, // 0 = no darkening, 1 = black. Raise it if the text is hard to read.
   tagline: 'Photographer, filmmaker and designer.',
   about:
-    'I make pictures, films, posters and 3D worlds. Pick a tab to see the collections, or open a page for the full set.',
-  email: 'you@example.com',
+    'I love photography, cinematography. I design posters and make 3D worlds. Pick a tab to see the collections, or open a page for the full set.',
+  email: 'alihasangalib420@gmail.com',
   links: [
-    { label: 'Instagram', href: '#' },
-    { label: 'Behance', href: '#' },
-    { label: 'YouTube', href: '#' },
+    { label: 'Instagram', href: 'https://www.instagram.com/galib.hasan52/' },
+    { label: 'Github', href: 'https://github.com/Galib2017' },
+    { label: 'Facebook', href: 'https://www.facebook.com/ali52.galib/' },
   ],
 };
 
