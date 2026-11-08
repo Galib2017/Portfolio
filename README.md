@@ -4,6 +4,13 @@
 2. `npm run dev`   -> http://localhost:3000 (restart it after adding new folders)
 3. `npm run build` -> static site in `out/` (upload to Netlify, Vercel, GitHub Pages, Cloudflare Pages)
 
+## Publishing on GitHub Pages
+1. Push the project to GitHub (branch `main`). Commit `package-lock.json` too.
+2. Repo Settings -> Pages -> Source: **GitHub Actions**.
+3. `.github/workflows/deploy.yml` builds and publishes on every push. It sets the base path from the repo name automatically (empty for a `username.github.io` repo or custom domain).
+4. If you have another workflow file for Pages in `.github/workflows/`, delete it so only this one runs.
+Preview a sub-address build locally: `NEXT_PUBLIC_BASE_PATH=/my-repo npm run build` (PowerShell: `$env:NEXT_PUBLIC_BASE_PATH="/my-repo"; npm run build`).
+
 ## Adding work (no code needed)
 Make one folder per collection inside `public/work/`. The folder name is the collection name.
 

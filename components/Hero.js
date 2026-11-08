@@ -1,10 +1,13 @@
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Hero({ profile }) {
+  const img = profile.heroImage.startsWith('/') ? BASE + profile.heroImage : profile.heroImage;
   return (
     <header
       className="hero"
       style={{
         '--overlay': profile.heroOverlay ?? 0.45,
-        '--hero-img': `url(${profile.heroImage})`,
+        '--hero-img': `url(${img})`,
       }}
     >
       <div className="hero-text">
