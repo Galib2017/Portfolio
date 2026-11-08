@@ -34,5 +34,5 @@ Save your image as `public/hero.jpg` (or change `heroImage` in `data/work.js`). 
 ## Tab colours, names, order
 Edit `categories` in `data/work.js`. Your name, tagline and links are in the same file.
 
-## Complex visuals
-`components/Hero3D.js` is a react-three-fiber (WebGL) scene (not used in the hero any more; render it inside any component with `dynamic(() => import('./Hero3D'), { ssr: false })`). Replace the mesh with your own, or load a Blender export (.glb) with drei's `useGLTF`.
+## Complex visuals (3D)
+The hero is now an image, so the 3D libraries were removed to keep installs fast and error-free. To add a react-three-fiber (WebGL) scene anywhere: `npm i three @react-three/fiber @react-three/drei`, write a client component with a `<Canvas>`, and load it with `dynamic(() => import('./MyScene'), { ssr: false })`. Blender exports (.glb) load with drei's `useGLTF`.

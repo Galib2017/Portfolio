@@ -4,7 +4,8 @@ import CollectionGrid from '../../../../components/CollectionGrid';
 import { getCategories } from '../../../../lib/content';
 
 export function generateStaticParams() {
-  return getCategories().flatMap((c) => c.collections.map((col) => ({ slug: c.slug, collection: col.slug })));
+  const params = getCategories().flatMap((c) => c.collections.map((col) => ({ slug: c.slug, collection: col.slug })));
+  return params.length ? params : [{ slug: '_none', collection: '_none' }]; // export needs at least one
 }
 
 export default function CollectionPage({ params }) {

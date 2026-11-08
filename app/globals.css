@@ -1,4 +1,4 @@
-:root{--bg:#EEF0F4;--ink:#13151A;--mute:#5B606B;--line:#D5D9E1;--blue:#2B4BFF;--accent:#2B4BFF}
+:root{--display:'Bricolage Grotesque Variable';--body:'Instrument Sans Variable';--bg:#EEF0F4;--ink:#13151A;--mute:#5B606B;--line:#D5D9E1;--blue:#2B4BFF;--accent:#2B4BFF}
 *{box-sizing:border-box;margin:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--body),system-ui,sans-serif;line-height:1.55}
 h1,h2{font-family:var(--display),system-ui,sans-serif;line-height:1.02;letter-spacing:-.02em}
@@ -13,7 +13,7 @@ a{color:inherit}
 .tab{flex:none;font:inherit;font-weight:600;background:transparent;border:2px solid var(--line);border-radius:999px;padding:.55rem 1.1rem;cursor:pointer;transition:all .15s}
 .tab:hover{border-color:var(--tc)}
 .tab.on{background:var(--tc);border-color:var(--tc);color:#fff}
-.panel-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.panel-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
 .panel-head h2{font-size:clamp(2rem,5vw,3.5rem)}
 .panel-head p{color:var(--mute)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem}

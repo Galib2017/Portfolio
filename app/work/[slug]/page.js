@@ -4,7 +4,8 @@ import CollectionCard from '../../../components/CollectionCard';
 import { getCategories } from '../../../lib/content';
 
 export function generateStaticParams() {
-  return getCategories().map((c) => ({ slug: c.slug }));
+  const params = getCategories().map((c) => ({ slug: c.slug }));
+  return params.length ? params : [{ slug: '_none' }]; // export needs at least one
 }
 
 export default function CategoryPage({ params }) {
